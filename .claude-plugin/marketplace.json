@@ -1,0 +1,13 @@
+{
+  "name": "pitcrew",
+  "owner": {
+    "name": "pitcrew"
+  },
+  "plugins": [
+    {
+      "name": "plugin",
+      "source": "./",
+      "description": "plugin"
+    }
+  ]
+}
