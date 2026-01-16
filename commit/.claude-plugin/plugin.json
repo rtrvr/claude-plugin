@@ -1,0 +1,9 @@
+{
+  "name": "commit",
+  "version": "1.0.0",
+  "description": "tracked 파일의 변경사항만 안전하게 커밋합니다. 한국어 커밋 메시지 자동 생성, 의심스러운 변경사항 확인을 지원합니다.",
+  "author": {
+    "name": "Jinukeu",
+    "email": "jinukeu@rtrvr.xyz"
+  }
+}

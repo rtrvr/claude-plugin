@@ -1,0 +1,9 @@
+{
+  "name": "plan-to-docs",
+  "version": "1.0.0",
+  "description": "계획을 구조화된 문서(.docs/)로 변환하고, Phase별로 체계적인 구현을 진행할 수 있게 도와줍니다.",
+  "author": {
+    "name": "Jinukeu",
+    "email": "jinukeu@rtrvr.xyz"
+  }
+}

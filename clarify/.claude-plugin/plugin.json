@@ -1,0 +1,9 @@
+{
+  "name": "clarify",
+  "version": "1.0.0",
+  "description": "소크라테스식 질문을 통해 모호한 아이디어를 명확하게 정리합니다. 추상적인 개념을 구체적인 이해로 전환하는 데 도움을 줍니다.",
+  "author": {
+    "name": "Jinukeu",
+    "email": "jinukeu@rtrvr.xyz"
+  }
+}
