@@ -1,17 +1,19 @@
 ---
-allowed-tools: Bash(gh pr view:*),Bash(gh api:*)
+allowed-tools: Bash(gh pr view:*),Bash(gh repo view:*),Bash(gh api:*)
 description: Resolve PR review comments by fixing code
 ---
 
-## Step 1: Get Current PR
+## Step 1: Get Current PR and Repository Info
 
-현재 브랜치의 PR 정보를 가져옵니다:
+현재 브랜치의 PR 정보와 레포지토리 정보를 가져옵니다:
 
 ```bash
 gh pr view --json number,url
+gh repo view --json owner,name
 ```
 
-PR이 없으면 사용자에게 알리고 종료합니다.
+- PR이 없으면 사용자에게 알리고 종료합니다.
+- `owner.login`과 `name` 값을 Step 2에서 사용합니다.
 
 ## Step 2: Fetch Unresolved Review Threads
 
@@ -40,7 +42,7 @@ gh api graphql -f query='
       }
     }
   }
-' -f owner=pilly-io -f repo=pillo-android-v2 -F pr=PR_NUMBER
+' -f owner=OWNER -f repo=REPO -F pr=PR_NUMBER
 ```
 
 `isResolved: false`인 thread만 필터링합니다.
