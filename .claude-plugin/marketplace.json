@@ -8,6 +8,11 @@
       "name": "plugin",
       "source": "./",
       "description": "plugin"
+    },
+    {
+      "name": "marketing",
+      "source": "./marketing",
+      "description": "Digital marketing strategy consulting plugin. Provides tailored strategies for Meta Ads account structure and performance marketing."
     }
   ]
 }

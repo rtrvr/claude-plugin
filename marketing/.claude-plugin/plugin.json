@@ -1,0 +1,9 @@
+{
+  "name": "marketing",
+  "version": "1.0.0",
+  "description": "디지털 마케팅 전략 컨설팅 플러그인. Meta Ads 계정 구조, 크리에이티브 전략 등 퍼포먼스 마케팅 전반의 맞춤 전략을 제시합니다.",
+  "author": {
+    "name": "Ben",
+    "email": "@rtrvr.xyz"
+  }
+}
