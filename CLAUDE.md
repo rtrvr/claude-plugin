@@ -28,6 +28,8 @@ Claude Code 플러그인 모음 저장소. 각 플러그인은 Claude Code의 sl
 | `plan-to-docs` | 계획을 `.docs/` 구조 문서로 변환 | `make-plan-to-docs`, `implement-phase` |
 | `marketing` | Meta Ads 계정 구조 컨설팅 | `meta-ads-consult` |
 | `mistakes` | 실수 패턴 기록 및 접근 방식 재고 | `add-mistake`, `rethink` |
+| `handoff` | 세션 핸드오프 프롬프트 생성 | `next-prompt` |
+| `preflight` | 구현 전 의도 파악 및 확인 | `preflight` |
 
 ## Conventions
 
