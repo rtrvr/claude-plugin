@@ -1,3 +1,9 @@
+---
+description: tracked 파일의 변경사항만 안전하게 커밋합니다.
+allowed-tools: Bash, Read, AskUserQuestion
+argument-hint: (없음)
+---
+
 `git status`에서 **tracked files의 변경사항만** 모두 커밋해줘 (하나의 커밋으로). 커밋 내용은 한국어로 적어줘.
 
 - `git add .`를 사용하지 마 (untracked files를 포함시킬 수 있음)

@@ -5,9 +5,19 @@
   },
   "plugins": [
     {
-      "name": "plugin",
-      "source": "./",
-      "description": "plugin"
+      "name": "commit",
+      "source": "./commit",
+      "description": "tracked 파일만 안전하게 커밋합니다. git add .를 사용하지 않고 한국어 커밋 메시지를 생성합니다."
+    },
+    {
+      "name": "pr",
+      "source": "./pr",
+      "description": "PR 생성 및 리뷰 코멘트 해결. base branch 추론, 한국어 제목/본문 생성, 커밋 타입별 그룹핑."
+    },
+    {
+      "name": "plan-to-docs",
+      "source": "./plan-to-docs",
+      "description": "계획을 .docs/ 구조 문서로 변환하고 Phase별로 구현합니다."
     },
     {
       "name": "marketing",

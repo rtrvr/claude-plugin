@@ -1,3 +1,9 @@
+---
+description: 지정한 Phase를 순서대로 구현합니다.
+allowed-tools: Read, Edit, Write, Glob, Grep, Bash, AskUserQuestion, Task
+argument-hint: <phase 번호 또는 이름>
+---
+
 $ARGUMENTS 에 해당하는 Phase를 구현해주세요.
 
 **중요**: 각 단계를 건너뛰지 말고 순서대로 진행하세요. 컨텍스트 수집 없이 바로 구현을 시작하지 마세요.

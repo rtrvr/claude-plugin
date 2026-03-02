@@ -1,3 +1,9 @@
+---
+description: 현재 브랜치에서 PR을 생성합니다.
+allowed-tools: Bash, AskUserQuestion
+argument-hint: (없음)
+---
+
 현재 브랜치에서 Pull Request를 생성해줘.
 
 ## Base Branch 선택

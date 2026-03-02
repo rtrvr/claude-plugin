@@ -1,3 +1,9 @@
+---
+description: 계획을 .docs/ 구조 문서로 변환합니다.
+allowed-tools: Read, Write, Glob, Grep, AskUserQuestion
+argument-hint: (없음)
+---
+
 이 계획을 .docs 디렉토리 아래에 폴더 구조로 생성해주세요.
 폴더 이름은 내용에 맞게 적절히 지정하세요. (예: feature-name-YYYYMMDD/)
 
