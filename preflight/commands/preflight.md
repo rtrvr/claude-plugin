@@ -64,7 +64,7 @@ Once confirmed, proceed with full implementation. All tools available.
 
 ### Rules
 - **Questions first, code second** — no implementation before confirmation
+- **ALWAYS execute Step 3 + Step 4** — never skip the restate-and-confirm cycle, regardless of how simple the task seems
 - **User-facing language** — describe behavior, not implementation details
 - **One concrete example minimum** — abstract summaries are not enough
 - **If ambiguous, ask** — don't guess and present a wrong understanding
-- **If trivially clear** (e.g., "fix the typo on line 42"): skip to Step 3 or just do it

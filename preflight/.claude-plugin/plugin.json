@@ -1,6 +1,6 @@
 {
   "name": "preflight",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "구현 전 의도를 질문으로 파악하고, 구체적 예시로 확인한 뒤 구현합니다.",
   "author": {
     "name": "Jinukeu",
