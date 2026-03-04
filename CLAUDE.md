@@ -30,6 +30,7 @@ Claude Code 플러그인 모음 저장소. 각 플러그인은 Claude Code의 sl
 | `mistakes` | 실수 패턴 기록 및 접근 방식 재고 | `add-mistake`, `rethink` |
 | `handoff` | 세션 핸드오프 프롬프트 생성 | `handoff` |
 | `preflight` | 구현 전 의도 파악 및 확인 | `preflight` |
+| `code-explorer` | pillo 코드 탐색 및 비개발자 질문 | `explore-code` |
 
 ## Conventions
 
