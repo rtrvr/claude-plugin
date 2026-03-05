@@ -22,53 +22,35 @@ MCP 미설정 시 `/setup-metabase-mcp` 실행을 안내한다.
 
 > `metabase` MCP 도구가 사용 가능한 경우 이 워크플로우를 따른다.
 
-### 사용 가능한 MCP 도구
+### Step 1: 의도 분류
 
-| 도구 | 기능 |
-|------|------|
-| `execute_query` | SQL 쿼리 직접 실행 |
-| `run_question` | 저장된 질문(Question) ID로 실행 |
-| `list_databases` | 연결된 데이터베이스 목록 |
-| `list_dashboards` | 모든 대시보드 목록 |
-| `get_dashboard` | 대시보드 상세 (카드 포함) |
-| `list_collections` | 컬렉션(폴더) 목록 |
-| `search` | 질문/대시보드/컬렉션 전체 검색 |
-| `create_dashboard` | 새 대시보드 생성 |
-| `create_collection` | 새 컬렉션 생성 |
-| `add_card_to_dashboard` | 대시보드에 질문 추가 |
-| `move_dashboard` | 대시보드 이동 |
-| `delete_dashboard` | 대시보드 삭제 |
-| `archive_collection` | 컬렉션 아카이브 |
-
-### Step 1: 의도 분류 (MCP 모드)
-
-| 요청 유형 | 사용할 도구 |
+| 요청 유형 | 수행할 작업 |
 |----------|------------|
-| 데이터 조회 ("DAU 보여줘", "가입자 수") | `execute_query` |
-| 저장된 질문 실행 ("리텐션 질문 실행해줘") | `run_question` |
-| 대시보드/컬렉션 탐색 | `list_dashboards`, `list_collections`, `get_dashboard` |
-| 검색 ("복약 관련 대시보드 찾아줘") | `search` |
-| 대시보드 생성 | `create_dashboard`, `add_card_to_dashboard` |
+| 데이터 조회 ("DAU 보여줘", "가입자 수") | SQL 작성 후 직접 실행 |
+| 저장된 질문 실행 ("리텐션 질문 실행해줘") | 질문 ID로 실행 |
+| 대시보드/컬렉션 탐색 | 목록 조회 후 상세 확인 |
+| 검색 ("복약 관련 대시보드 찾아줘") | 키워드로 전체 검색 |
+| 대시보드 생성 | 대시보드 생성 후 카드 추가 |
 
-### Step 2: 쿼리 실행 (execute_query)
+### Step 2: 쿼리 실행
 
 1. `references/schema.md`로 관련 테이블/컬럼 파악
 2. `references/taxonomy.md`로 이벤트명/프로퍼티 키 확인
-3. SQL 작성 후 `execute_query`로 직접 실행
+3. SQL 작성 후 직접 실행
 4. 결과를 한국어로 해석해서 설명
 
 **SQL 작성 규칙:**
 - `events` 테이블은 반드시 `WHERE event_timestamp >= TIMESTAMP('...')` 파티션 필터 포함
 - 기간 미명시 시 최근 30일 기본 적용
 - `properties` 접근: `JSON_VALUE(properties, '$.key')` 패턴
-- Database ID는 `list_databases`로 먼저 확인
+- 쿼리 실행 전 Database ID 먼저 확인
 
 ### Step 3: 대시보드 생성 워크플로우
 
-1. `create_collection`으로 컬렉션 생성 (필요시)
-2. 분석 쿼리를 `execute_query`로 테스트
-3. `create_dashboard`로 대시보드 생성
-4. `add_card_to_dashboard`로 카드 추가
+1. 컬렉션 생성 (필요시)
+2. 분석 쿼리 테스트 실행
+3. 대시보드 생성
+4. 카드 추가
 
 ---
 
@@ -137,7 +119,7 @@ MCP 미설정 시 `/setup-metabase-mcp` 실행을 안내한다.
 |------|------|
 | MCP 연결 안 됨 | "MCP가 연결되지 않았습니다. `/setup-metabase-mcp`로 설정 후 다시 시도해주세요. 지금은 SQL 생성 모드로 진행합니다." |
 | 테이블/컬럼 불확실 | "어떤 데이터를 보고 싶으신지 더 구체적으로 알려주시면 정확한 쿼리를 드릴 수 있어요." |
-| 이벤트명 불확실 | "`references/taxonomy.md`에서 이벤트 목록을 확인하거나, MCP로 `execute_query`를 통해 `SELECT DISTINCT event_name` 조회 가능합니다." |
+| 이벤트명 불확실 | "`references/taxonomy.md`에서 이벤트 목록을 확인하거나, MCP로 `SELECT DISTINCT event_name` 직접 조회 가능합니다." |
 | 실시간 데이터 요청 | "identity_map과 user_profiles는 1시간마다 갱신됩니다. 실시간은 events 테이블을 직접 조회하세요." |
 
 ## References
