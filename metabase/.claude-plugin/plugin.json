@@ -1,0 +1,6 @@
+{
+  "name": "metabase",
+  "version": "1.0.0",
+  "description": "비개발자를 위한 Metabase 쿼리 & 시각화 가이드. 자연어 질문으로 BigQuery SQL 생성 또는 차트 설정 방법을 안내합니다.",
+  "author": "pitcrew"
+}
