@@ -1,6 +1,6 @@
 {
   "name": "pr",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "PR 생성 및 리뷰 코멘트 해결을 도와줍니다. 커밋 기반 제목/본문 자동 생성, 우선순위별 리뷰 코멘트 처리를 지원합니다.",
   "author": {
     "name": "Jinukeu",
