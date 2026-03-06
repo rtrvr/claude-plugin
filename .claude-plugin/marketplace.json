@@ -43,6 +43,11 @@
       "name": "code-explorer",
       "source": "./code-explorer",
       "description": "pillo 프로젝트 코드를 가져오고, 비개발자가 코드에 대해 자유롭게 질문할 수 있습니다."
+    },
+    {
+      "name": "metabase",
+      "source": "./metabase",
+      "description": "비개발자를 위한 Metabase 쿼리 & 시각화 가이드. 자연어 질문으로 BigQuery SQL 생성 또는 차트 설정 방법을 안내합니다."
     }
   ]
 }
