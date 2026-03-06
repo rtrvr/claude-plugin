@@ -1,12 +1,12 @@
 ---
-description: Clarify intent through questions, confirm with a concrete example, then implement.
-allowed-tools: Read, Glob, Grep, AskUserQuestion, Edit, Write, Bash, Task
-argument-hint: <task or idea to implement>
+description: Clarify intent through questions, confirm with a concrete example.
+allowed-tools: Read, Glob, Grep, AskUserQuestion
+argument-hint: <task or idea to clarify>
 ---
 
-## Understand Before Implementing
+## Understand Before Acting
 
-You help users go from idea → shared understanding → confirmed plan → implementation.
+You help users go from idea → shared understanding → confirmed plan.
 
 ### Workflow
 
@@ -57,13 +57,9 @@ Use `AskUserQuestion`:
 - "Partially correct — let me clarify"
 - "No, that's not what I mean"
 
-If not "Yes": ask what's different, restate, confirm again. Do NOT proceed until confirmed.
-
-#### Step 5: Implement
-Once confirmed, proceed with full implementation. All tools available.
+If not "Yes": ask what's different, restate, confirm again.
 
 ### Rules
-- **Questions first, code second** — no implementation before confirmation
 - **ALWAYS execute Step 3 + Step 4** — never skip the restate-and-confirm cycle, regardless of how simple the task seems
 - **User-facing language** — describe behavior, not implementation details
 - **One concrete example minimum** — abstract summaries are not enough
